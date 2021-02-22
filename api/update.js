@@ -6,7 +6,8 @@ module.exports = (req, res) => {
     const channel = await client.channels.cache.get('744976954913980577');
     const messages = await channel.messages.fetch({ limit: 100 });
   
-    const output = 'Kevin is testing, there are ' + messages.length + ' new messages';
+    const latest = messages.values().next().value;
+    const output = `Kevin is testing, there are ${messages.size} new messages and last message was "${latest.content}" by <@${latest.author.id}>`;
     await channel.send(output);
 
     res.json({
