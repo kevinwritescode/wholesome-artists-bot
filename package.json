@@ -1,8 +1,11 @@
 {
-    "name": "hello-world",
-    "description": "Sample NodeJs web application",
+    "name": "wholesome-artists",
+    "description": "Wholesome Artist Discord Helper",
     "version": "0.0.1",
     "private": true,
+    "dependencies": {
+        "discord.js": "12.5.1"
+    },
     "devDependencies": {
         "dotenv": "8.2.0",
         "eslint": "7.20.0",
@@ -12,8 +15,5 @@
     },
     "scripts": {
         "test": "mocha --recursive tests"
-    },
-    "dependencies": {
-        "discord.js": "12.5.1"
     }
 }
