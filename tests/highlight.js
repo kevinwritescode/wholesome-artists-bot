@@ -1,10 +1,10 @@
 require('dotenv').config();
 const assert = require('assert');
-const apiUpdate = require('../api/update');
+const apiHighlight = require('../api/highlight');
 
-describe('Update', () => {
+describe('/api/highlight', () => {
   it('success', (done) => {
-    apiUpdate({ }, { json: (res) => {
+    apiHighlight({ }, { json: (res) => {
       assert(res);
       done();
     } });
